@@ -9,6 +9,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    color: white;
+    background-color: black;
 }
 
 .world {
