@@ -14,6 +14,8 @@ body {
 .world {
     overflow: hidden;
     position: relative;
+    width: 100%;
+    height: 200px;
 }
 
 .score{
@@ -33,4 +35,27 @@ body {
 
 .hide {
     display: none;
+}
+
+.ground {
+    --left: 0;
+    position: absolute;
+    width: 300%;
+    bottom: 0;
+    left: calc(var(--left) * 1%);
+}
+
+.character {
+    --bottom: 0;
+    position: absolute;
+    left: 1%;
+    height: 100%;
+    bottom: calc(var(--bottom) * 1%);
+}
+
+.obstacle {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 0;
 }
