@@ -12,6 +12,7 @@ export function setupSkate() {
     setCustomProperty(skateElem, '--bottom', 0)
     document.removeEventListener("keydown", onJump)
     document.addEventListener("keydown", onJump)
+
     document.removeEventListener("touchstart", onJump)
     document.addEventListener("touchstart", onJump)
 }
@@ -43,8 +44,9 @@ function handleJump(delta) {
 }
 
 function onJump(e) {
-    if (e.code !== 'Space' || isJumping) return
+    if (isJumping) return
 
     yVelocity = JUMP_SPEED
     isJumping = true
 }
+
