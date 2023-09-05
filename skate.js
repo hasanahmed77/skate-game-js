@@ -1,6 +1,7 @@
 import { getCustomProperty, incrementCustomProperty, setCustomProperty } from './updateCustomProperty.js'
 
 const skateElem = document.querySelector('[data-skate]')
+const startScreenElem = document.querySelector("[data-start-score]")
 const JUMP_SPEED = .4
 const GRAVITY = .0015
 
@@ -20,6 +21,14 @@ export function setupSkate() {
 export function updateSkate(delta, speedScale ) {
     handleRun(delta, speedScale)
     handleJump(delta)
+}
+
+export function getSkateRect() {
+    return skateElem.getBoundingClientRect()
+  }
+
+export function setSkateLose() {
+    skateElem.src = 'img/lost.png'
 }
 
 function handleRun(delta, speedScale) {
@@ -49,4 +58,6 @@ function onJump(e) {
     yVelocity = JUMP_SPEED
     isJumping = true
 }
+
+
 
