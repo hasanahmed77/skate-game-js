@@ -1,4 +1,5 @@
 import { setupGround, updateGround } from "./ground.js";
+import { setupSkate, updateSkate } from "./skate.js";
 
 const WORLD_HEIGHT = 30
 const WORLD_WIDTH = 100
@@ -26,6 +27,7 @@ function update(time) {
     const delta = time - lastTime
 
     updateGround(delta, speedScale)
+    updateSkate(delta, speedScale)
     updateSpeedScale(delta)
     updateScore(delta)
 
@@ -48,6 +50,7 @@ function handleStart(){
     speedScale = 1
     score = 0
     setupGround()
+    setupSkate()
     startScreenElem.classList.add("hide")
     window.requestAnimationFrame(update)
 }
