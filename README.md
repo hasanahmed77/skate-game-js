@@ -2,4 +2,4 @@
 
 A skate game inspired by the Chrome Dinosaur game!
 
-Made with Vanilla HTML, CSS, & Vanilla JavaScript!
+Made with HTML, CSS, & Vanilla JavaScript!
